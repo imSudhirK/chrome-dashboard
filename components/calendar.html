@@ -1,0 +1,38 @@
+<div
+  style="
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 340px;
+    box-sizing: border-box;
+  "
+>
+  <div
+    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem"
+  >
+    <button id="prev" style="background: none; border: none; font-size: 1.5rem; cursor: pointer">
+      &#8249;
+    </button>
+    <div id="month-year" style="font-weight: bold; font-size: 1.2rem"></div>
+    <button id="next" style="background: none; border: none; font-size: 1.5rem; cursor: pointer">
+      &#8250;
+    </button>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; margin-bottom: 6px">
+    <div style="text-align: center; font-weight: 600; color: #4b5563">S</div>
+    <div style="text-align: center; font-weight: 600; color: #4b5563">M</div>
+    <div style="text-align: center; font-weight: 600; color: #4b5563">T</div>
+    <div style="text-align: center; font-weight: 600; color: #4b5563">W</div>
+    <div style="text-align: center; font-weight: 600; color: #4b5563">T</div>
+    <div style="text-align: center; font-weight: 600; color: #4b5563">F</div>
+    <div style="text-align: center; font-weight: 600; color: #4b5563">S</div>
+  </div>
+
+  <div
+    id="calendar-days"
+    style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px"
+  ></div>
+</div>

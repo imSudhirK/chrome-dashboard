@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Custom New Tab",
+  "version": "1.0",
+  "description": "A Beautiful Custom New Tab Page",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [],
+  "host_permissions": ["https://lens.google.com/"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}

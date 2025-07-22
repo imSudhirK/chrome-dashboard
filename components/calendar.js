@@ -1,0 +1,83 @@
+const monthYear = document.getElementById('month-year');
+const calendarDays = document.getElementById('calendar-days');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+
+let currentDate = new Date();
+
+function renderCalendar(date) {
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  const today = new Date();
+  const firstDay = new Date(year, month, 1).getDay();
+  const lastDate = new Date(year, month + 1, 0).getDate();
+  const prevLastDate = new Date(year, month, 0).getDate();
+
+  const monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
+
+  monthYear.textContent = `${monthNames[month]} ${year}`;
+  calendarDays.innerHTML = '';
+
+  function createCell(day, options = {}) {
+    const div = document.createElement('div');
+    div.textContent = day;
+    div.style.textAlign = 'center';
+    div.style.padding = '0.6rem 0';
+    div.style.borderRadius = '9999px';
+    div.style.fontWeight = 'normal';
+    div.style.color = '#1f2937';
+    div.style.fontSize = '0.875rem';
+    if (options.otherMonth) {
+      div.style.color = '#d1d5db';
+    }
+    if (options.today) {
+      div.style.background = '#2563eb';
+      div.style.color = 'white';
+      div.style.fontWeight = 'bold';
+    }
+    return div;
+  }
+
+  for (let i = firstDay; i > 0; i--) {
+    calendarDays.appendChild(createCell(prevLastDate - i + 1, { otherMonth: true }));
+  }
+
+  for (let i = 1; i <= lastDate; i++) {
+    const isToday =
+      i === today.getDate() && month === today.getMonth() && year === today.getFullYear();
+    calendarDays.appendChild(createCell(i, { today: isToday }));
+  }
+
+  const totalCells = firstDay + lastDate;
+  const nextDays = 7 - (totalCells % 7);
+  if (nextDays < 7) {
+    for (let i = 1; i <= nextDays; i++) {
+      calendarDays.appendChild(createCell(i, { otherMonth: true }));
+    }
+  }
+}
+
+prevBtn.onclick = () => {
+  currentDate.setMonth(currentDate.getMonth() - 1);
+  renderCalendar(currentDate);
+};
+
+nextBtn.onclick = () => {
+  currentDate.setMonth(currentDate.getMonth() + 1);
+  renderCalendar(currentDate);
+};
+
+renderCalendar(currentDate);

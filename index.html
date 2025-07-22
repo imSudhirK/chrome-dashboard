@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Tab</title>
+    <link rel="icon" href="icons/chrome-icon.png" type="image/png" />
+  </head>
+
+  <body
+    style="
+      background: linear-gradient(135deg, #1e293b, #334155);
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      position: relative;
+    "
+  >
+    <!-- Clock: Top Left -->
+    <div
+      id="clock-container"
+      style="position: absolute; top: 50%; left: 16px; transform: translateY(-50%)"
+    ></div>
+
+    <!-- Calendar: Right Center -->
+    <div
+      id="calendar-container"
+      style="position: absolute; top: 50%; right: 16px; transform: translateY(-50%)"
+    ></div>
+
+    <!-- Search Bar: Middle Center -->
+    <div
+      id="search-bar-container"
+      style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)"
+    ></div>
+
+    <!-- Google Icons: Top Right -->
+    <div
+      id="accounts-container"
+      style="
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        display: flex;
+        gap: 24px;
+        align-items: center;
+      "
+    ></div>
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
