@@ -56,8 +56,14 @@ function updateClock() {
   document.getElementById('hour-hand').style.transform = `rotate(${hourAngle}deg)`;
 
   // Update digital time
-  const digitalTime = now.toLocaleTimeString();
-  document.getElementById('digital-time').textContent = digitalTime;
+  const options = {
+    weekday: 'short',
+    month: 'long',
+    day: 'numeric'
+  };
+
+  const formattedDate = now.toLocaleDateString('en-US', options);
+  document.getElementById('digital-time').textContent = formattedDate;
 }
 
 // Initialize
