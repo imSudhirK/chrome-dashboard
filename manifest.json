@@ -9,8 +9,12 @@
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
-  "permissions": [],
-  "host_permissions": ["https://lens.google.com/"],
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "permissions": ["scripting"],
+  "host_permissions": ["https://lens.google.com/", "https://zenquotes.io/"],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self';"
   }

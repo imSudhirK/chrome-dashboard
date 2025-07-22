@@ -43,3 +43,16 @@
   const html = await res.text();
   document.getElementById('accounts-container').innerHTML = html;
 })();
+
+// load daily quote
+(async () => {
+  const res = await fetch(chrome.runtime.getURL('components/quotes.html'));
+  const html = await res.text();
+  document.getElementById('quotes-container').innerHTML = html;
+
+  // Load the script separately after HTML is injected
+  const script = document.createElement('script');
+  script.type = 'module';
+  script.src = chrome.runtime.getURL('components/quotes.js');
+  document.body.appendChild(script);
+})();
