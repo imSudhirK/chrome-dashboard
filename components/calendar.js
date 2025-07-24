@@ -38,14 +38,17 @@ function renderCalendar(date) {
     div.style.padding = '0.6rem 0';
     div.style.borderRadius = '9999px';
     div.style.fontWeight = 'normal';
-    div.style.color = '#1f2937';
+    div.style.color = 'white';
     div.style.fontSize = '0.875rem';
+    if (options.isSunday) {
+      div.style.color = 'orangered';
+    }
     if (options.otherMonth) {
-      div.style.color = '#d1d5db';
+      div.style.color = '#1f2937';
     }
     if (options.today) {
-      div.style.background = '#2563eb';
-      div.style.color = 'white';
+      div.style.background = 'white';
+      div.style.color = '#1e293b';
       div.style.fontWeight = 'bold';
     }
     return div;
@@ -58,7 +61,9 @@ function renderCalendar(date) {
   for (let i = 1; i <= lastDate; i++) {
     const isToday =
       i === today.getDate() && month === today.getMonth() && year === today.getFullYear();
-    calendarDays.appendChild(createCell(i, { today: isToday }));
+    const dayOfWeek = new Date(year, month, i).getDay();
+    const isSunday = dayOfWeek === 0;
+    calendarDays.appendChild(createCell(i, { today: isToday, isSunday }));
   }
 
   const totalCells = firstDay + lastDate;
