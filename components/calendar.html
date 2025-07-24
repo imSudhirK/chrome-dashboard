@@ -1,41 +1,58 @@
 <div
-  style="
-    color: white;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    height: 340px;
-    box-sizing: border-box;
-  "
+    style="
+        color: white;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        height: 340px;
+        box-sizing: border-box;
+    "
 >
-  <div
-    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem"
-  >
-    <button
-      id="prev"
-      style="background: none; border: none; color: #4b5563; font-size: 1.5rem; cursor: pointer"
+    <div
+        style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        "
     >
-      &#8249;
-    </button>
-    <div id="month-year" style="font-weight: bold; font-size: 1.2rem"></div>
-    <button
-      id="next"
-      style="background: none; border: none; color: #4b5563; font-size: 1.5rem; cursor: pointer"
-    >
-      &#8250;
-    </button>
-  </div>
+        <button
+            id="prev"
+            style="
+                background: none;
+                border: none;
+                color: #4b5563;
+                font-size: 1.5rem;
+                cursor: pointer;
+            "
+        >
+            &#8249;
+        </button>
+        <div id="month-year" style="font-weight: bold; font-size: 1.2rem"></div>
+        <button
+            id="next"
+            style="
+                background: none;
+                border: none;
+                color: #4b5563;
+                font-size: 1.5rem;
+                cursor: pointer;
+            "
+        >
+            &#8250;
+        </button>
+    </div>
 
-  <div style="display: grid; grid-template-columns: repeat(7, 1fr); margin-bottom: 6px">
-    <div style="text-align: center; font-weight: 600; color: orangered">S</div>
-    <div style="text-align: center; font-weight: 600; color: white">M</div>
-    <div style="text-align: center; font-weight: 600; color: white">T</div>
-    <div style="text-align: center; font-weight: 600; color: white">W</div>
-    <div style="text-align: center; font-weight: 600; color: white">T</div>
-    <div style="text-align: center; font-weight: 600; color: white">F</div>
-    <div style="text-align: center; font-weight: 600; color: white">S</div>
-  </div>
+    <div style="display: grid; grid-template-columns: repeat(7, 1fr); margin-bottom: 6px">
+        <div style="text-align: center; font-weight: 600; color: orangered">S</div>
+        <div style="text-align: center; font-weight: 600; color: white">M</div>
+        <div style="text-align: center; font-weight: 600; color: white">T</div>
+        <div style="text-align: center; font-weight: 600; color: white">W</div>
+        <div style="text-align: center; font-weight: 600; color: white">T</div>
+        <div style="text-align: center; font-weight: 600; color: white">F</div>
+        <div style="text-align: center; font-weight: 600; color: white">S</div>
+    </div>
 
-  <div id="calendar-days" style="display: grid; grid-template-columns: repeat(7, 1fr)"></div>
+    <div id="calendar-days" style="display: grid; grid-template-columns: repeat(7, 1fr)"></div>
 </div>

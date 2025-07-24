@@ -1,82 +1,78 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Tab</title>
-    <link rel="icon" href="icons/chrome-icon.png" type="image/png" />
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>New Tab</title>
+        <link rel="icon" href="icons/chrome-icon.png" type="image/png" />
+    </head>
 
-  <body
-    style="
-      background: linear-gradient(135deg, #1e293b, #334155);
-      min-height: 100vh;
-      margin: 0;
-      font-family: cursive;
-      position: relative;
-    "
-  >
-    <!-- Clock: Top Left -->
-    <div
-      id="clock-container"
-      style="position: absolute; top: 50%; left: 16px; transform: translateY(-50%)"
-    ></div>
-
-    <!-- Calendar: Right Center -->
-    <div
-      id="calendar-container"
-      style="position: absolute; top: 50%; right: 16px; transform: translateY(-50%)"
-    ></div>
-
-    <div
-      style="
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #f8fafc;
-        font-size: 50px;
-        text-align: center;
-      "
+    <body
+        style="
+            background: linear-gradient(135deg, #1e293b, #334155);
+            min-height: 100vh;
+            margin: 0;
+            font-family: cursive;
+            position: relative;
+        "
     >
-      Welcome! Sudhir
-    </div>
+        <!-- Clock: Top Left -->
+        <div
+            id="clock-container"
+            style="position: absolute; top: 50%; left: 16px; transform: translateY(-50%)"
+        ></div>
 
-    <!-- Search Bar: Middle Center -->
-    <div
-      id="search-bar-container"
-      style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%)"
-    ></div>
+        <!-- Calendar: Right Center -->
+        <div
+            id="calendar-container"
+            style="position: absolute; top: 50%; right: 16px; transform: translateY(-50%)"
+        ></div>
 
-    <!-- Google Icons: Top Right -->
-    <div
-      id="accounts-container"
-      style="
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        display: flex;
-        gap: 24px;
-        align-items: center;
-      "
-    ></div>
+        <div
+            style="
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #f8fafc;
+                font-size: 50px;
+                text-align: center;
+            "
+        >
+            Welcome! Sudhir
+        </div>
 
-    <!-- Daily Quote: Bottom Center -->
-    <div
-      id="quotes-container"
-      style="
-        position: fixed;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        pointer-events: none;
-        z-index: 10;
-      "
-    ></div>
+        <!-- Search Bar: Middle Center -->
+        <div
+            id="search-bar-container"
+            style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%)"
+        ></div>
 
-    <script src="index.js" type="module"></script>
-  </body>
+        <!-- Google Icons: Top Right -->
+        <div id="accounts-container" style="position: absolute; top: 16px; right: 16px"></div>
+
+        <!-- To-Do List: Below Search Bar -->
+        <div
+            id="todos-container"
+            style="position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%)"
+        ></div>
+
+        <!-- Daily Quote: Bottom Center -->
+        <div
+            id="quotes-container"
+            style="
+                position: fixed;
+                bottom: 24px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                pointer-events: none;
+                z-index: 10;
+            "
+        ></div>
+
+        <script src="index.js" type="module"></script>
+    </body>
 </html>
