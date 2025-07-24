@@ -44,11 +44,10 @@ function renderCalendar(date) {
             div.style.color = 'orangered';
         }
         if (options.otherMonth) {
-            div.style.color = '#1f2937';
+            div.style.color = '#4b5563';
         }
         if (options.today) {
-            div.style.background = 'white';
-            div.style.color = '#1e293b';
+            div.style.background = '#4b5563';
             div.style.fontWeight = 'bold';
         }
         return div;
